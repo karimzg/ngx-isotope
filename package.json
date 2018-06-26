@@ -27,6 +27,11 @@
   "bugs": {
     "url": "https://github.com/ascodix/ngx-isotope/issues"
   },
+  "dependencies" : {
+    "imagesloaded" : "^4.1.4",
+    "masonry-layout": "^4.2.1",
+    "isotope-layout": "^3.0.6"
+  },
   "devDependencies": {
     "@angular/common": "^4.0.0",
     "@angular/compiler": "^4.0.0",

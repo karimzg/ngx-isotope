@@ -1,4 +1,5 @@
-import { AfterViewInit, Component, ElementRef, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { IsotopeGridComponent } from '../isotope-grid/isotope-grid.component';
 
 @Component({
@@ -6,16 +7,18 @@ import { IsotopeGridComponent } from '../isotope-grid/isotope-grid.component';
   templateUrl: './isotope-item.component.html',
   styleUrls: ['./isotope-item.component.scss']
 })
-export class IsotopeItemComponent implements OnInit, AfterViewInit {
+export class IsotopeItemComponent implements AfterViewInit {
 
-  constructor(private grid: IsotopeGridComponent, public el: ElementRef) { }
+  constructor(
+      private grid: IsotopeGridComponent,
+      public el: ElementRef,
+      @Inject(PLATFORM_ID) private platformId: object
+  ) { }
 
-  ngOnInit() {
-
+  ngAfterViewInit() {
+      if (isPlatformBrowser(this.platformId)) {
+          this.grid.add(this.el.nativeElement);
+      }
   }
-
-    ngAfterViewInit() {
-        this.grid.add(this.el.nativeElement);
-    }
 
 }
