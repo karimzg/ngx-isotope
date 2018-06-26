@@ -1,11 +1,11 @@
 {
-  "name": "ngx-isotope",
-  "version": "0.1.7",
+  "name": "ngx-isotope-universal",
+  "version": "0.1.8",
   "scripts": {
     "build": "gulp build",
     "build:watch": "gulp",
     "docs": "npm run docs:build",
-    "docs:build": "compodoc -p tsconfig.json -n ngx-isotope -d docs --hideGenerator",
+    "docs:build": "compodoc -p tsconfig.json -n ngx-isotope-universal -d docs --hideGenerator",
     "docs:serve": "npm run docs:build -- -s",
     "docs:watch": "npm run docs:build -- -s -w",
     "lint": "tslint --type-check --project tsconfig.json src/**/*.ts",
@@ -13,11 +13,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ascodix/ngx-isotope"
+    "url": "https://github.com/zgoogle59/ngx-isotope-universal"
   },
   "author": {
-    "name": "Albuisson Stéphane",
-    "email": "stephane.albuisson@gmail.com"
+    "name": "Zgoulli K.",
+    "email": "karim@nakaa.com"
   },
   "keywords": [
     "angular2",
@@ -25,12 +25,7 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ascodix/ngx-isotope/issues"
-  },
-  "dependencies" : {
-    "imagesloaded" : "^4.1.4",
-    "masonry-layout": "^4.2.1",
-    "isotope-layout": "^3.0.6"
+    "url": "https://github.com/zgoogle59/ngx-isotope-universal/issues"
   },
   "devDependencies": {
     "@angular/common": "^4.0.0",

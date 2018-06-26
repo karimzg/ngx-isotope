@@ -131,7 +131,7 @@ gulp.task('rollup:umd', function () {
       // The name to use for the module for UMD/IIFE bundles
       // (required for bundles with exports)
       // See https://github.com/rollup/rollup/wiki/JavaScript-API#modulename
-      moduleName: 'ngx-isotope',
+      moduleName: 'ngx-isotope-universal',
 
       // See https://github.com/rollup/rollup/wiki/JavaScript-API#globals
       globals: {
@@ -139,7 +139,7 @@ gulp.task('rollup:umd', function () {
       }
 
     }))
-    .pipe(rename('ngx-isotope.umd.js'))
+    .pipe(rename('ngx-isotope-universal.umd.js'))
     .pipe(gulp.dest(distFolder));
 });
 
